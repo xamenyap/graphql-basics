@@ -1,0 +1,19 @@
+# to get Macbook product with ID = 1
+query getMacbookProducts {
+  getProduct(id: "1") {
+    id
+    name
+    reviews {
+      content
+      rating
+    }
+  }
+}
+
+# to add review to Macbook product with ID = 1
+mutation addReviewToFirstProduct {
+  addReview(productId: "1", content: "powerful laptop", rating: 9) {
+    content
+    rating
+  }
+}
