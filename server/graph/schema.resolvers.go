@@ -25,7 +25,6 @@ func (r *mutationResolver) AddReview(ctx context.Context, productID string, cont
 		return nil, fmt.Errorf("cannot find product with id %s", productID)
 	}
 
-	defer fmt.Println(r.products)
 	return addReview(&r.products[idx], content, rating)
 }
 
